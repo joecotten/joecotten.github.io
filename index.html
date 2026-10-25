@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Joe Cotten | Data Analyst</title>
+<meta name="description" content="Joe Cotten is a data analyst in Madison, Mississippi with a background in IT, web development, and technical support.">
+<style>
+  :root {
+    --bg: #fafaf8;
+    --card: #ffffff;
+    --text: #1d2327;
+    --muted: #5d6770;
+    --accent: #1f5fbf;
+    --line: #e4e4df;
+    --chip: #eaf1fb;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #14171a;
+      --card: #1b1f23;
+      --text: #e8eaec;
+      --muted: #9aa4ad;
+      --accent: #6aa5ff;
+      --line: #2b3137;
+      --chip: #22303f;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.55;
+  }
+  .wrap { max-width: 760px; margin: 0 auto; padding: 40px 16px 64px; }
+  header { margin-bottom: 32px; }
+  h1 { font-size: 2.2rem; margin: 0 0 4px; letter-spacing: -0.02em; }
+  .title { font-size: 1.15rem; color: var(--accent); font-weight: 600; margin: 0 0 6px; }
+  .meta { color: var(--muted); margin: 0 0 16px; }
+  .links { display: flex; flex-wrap: wrap; gap: 10px; }
+  .links a {
+    text-decoration: none;
+    color: var(--accent);
+    border: 1px solid var(--line);
+    background: var(--card);
+    padding: 8px 14px;
+    border-radius: 999px;
+    font-size: 0.95rem;
+  }
+  .links a:hover { border-color: var(--accent); }
+  section { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 22px 22px 6px; margin-bottom: 18px; }
+  h2 { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--muted); margin: 0 0 14px; }
+  .item { margin-bottom: 18px; }
+  .item h3 { font-size: 1.05rem; margin: 0; }
+  .item .sub { color: var(--muted); font-size: 0.95rem; margin: 2px 0 0; }
+  .chips { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; padding: 0; list-style: none; }
+  .chips li { background: var(--chip); color: var(--text); padding: 6px 12px; border-radius: 999px; font-size: 0.9rem; }
+  p.summary { margin: 0 0 16px; }
+  footer { text-align: center; color: var(--muted); font-size: 0.85rem; margin-top: 28px; }
+  @media (max-width: 480px) { h1 { font-size: 1.8rem; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <h1>Joe Cotten</h1>
+    <p class="title">Data Analyst</p>
+    <p class="meta">Madison, Mississippi</p>
+    <div class="links">
+      <a href="mailto:joe.cotten95@gmail.com">Email</a>
+      <a href="https://www.linkedin.com/in/joe-cotten" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+  </header>
+
+  <section>
+    <h2>About</h2>
+    <p class="summary">
+      Data analyst with a background in information technology, web development, and technical support.
+      I pair hands-on IT experience with training in data analytics, working with SQL, Python, and dashboards
+      to turn data into something people can use.
+    </p>
+  </section>
+
+  <section>
+    <h2>Experience</h2>
+
+    <div class="item">
+      <h3>System Technician</h3>
+      <p class="sub">Yates Services &middot; Canton, Mississippi</p>
+      <p class="sub">Jul 2026 &ndash; Present</p>
+    </div>
+
+    <div class="item">
+      <h3>Director of Technology</h3>
+      <p class="sub">Emmanuel Baptist Church &middot; Macon, Mississippi</p>
+      <p class="sub">Mar 2023 &ndash; Present</p>
+    </div>
+
+    <div class="item">
+      <h3>Web Developer</h3>
+      <p class="sub">Juice &amp; Jen &middot; Houston, Texas</p>
+      <p class="sub">Feb 2022 &ndash; Present</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Education</h2>
+
+    <div class="item">
+      <h3>Vanderbilt University</h3>
+      <p class="sub">Certificate, Data Analytics</p>
+      <p class="sub">Nov 2023 &ndash; May 2024</p>
+    </div>
+
+    <div class="item">
+      <h3>Mississippi State University</h3>
+      <p class="sub">Information Technology</p>
+      <p class="sub">2019 &ndash; Dec 2022</p>
+    </div>
+
+    <div class="item">
+      <h3>Southwest Mississippi Community College</h3>
+      <p class="sub">Associate of Arts, Computer Science</p>
+      <p class="sub">2017 &ndash; 2019</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Skills</h2>
+    <ul class="chips">
+      <li>SQL</li>
+      <li>Python</li>
+      <li>Data Analytics</li>
+      <li>Dashboards</li>
+      <li>Data Management</li>
+      <li>Data Engineering</li>
+      <li>Data Science</li>
+      <li>Algorithms</li>
+      <li>IT Infrastructure</li>
+      <li>Technical Support</li>
+    </ul>
+  </section>
+
+  <footer>&copy; <span id="yr"></span> Joe Cotten</footer>
+</div>
+<script>document.getElementById('yr').textContent = new Date().getFullYear();</script>
+</body>
+</html>
