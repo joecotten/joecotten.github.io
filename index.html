@@ -5,9 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="color-scheme" content="light dark">
 <title>Joe Cotten | Data Analyst</title>
-<meta name="description" content="Joe Cotten is a data analyst in Madison, Mississippi with a background in IT support and web development.">
+<meta name="description" content="Joe Cotten is a data analyst in Canton, Mississippi with a background in IT support and web development.">
 <meta property="og:title" content="Joe Cotten | Data Analyst">
-<meta property="og:description" content="Data analyst in Madison, Mississippi with a background in IT support and web development.">
+<meta property="og:description" content="Data analyst in Canton, Mississippi with a background in IT support and web development.">
 <meta name="theme-color" content="#1F46E0">
 <script>document.documentElement.className += ' js';</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -21,6 +21,7 @@
     --work: #1F46E0;
     --school: #E8A100;
     --line: #D9DFEA;
+    --card: #FFFFFF;
     --grid: rgba(13, 27, 46, 0.13);
     --hero: #1F46E0;
     --display: "Bricolage Grotesque", "Segoe UI", system-ui, sans-serif;
@@ -34,6 +35,7 @@
       --work: #7C9BFF;
       --school: #FFC24B;
       --line: #22314A;
+      --card: #111E31;
       --grid: rgba(232, 238, 248, 0.14);
       --hero: #1634B5;
     }
@@ -147,6 +149,35 @@
   .entries.school li { border-left-color: var(--school); }
   .entries h3 { font-family: var(--display); font-weight: 600; font-size: 1.25rem; line-height: 1.25; margin: 0 0 2px; }
   .entries p { margin: 0; color: var(--muted); }
+  .entries .did { margin: 10px 0 0; padding-left: 18px; list-style: disc; }
+  .entries .did li { border: 0; padding-left: 0; margin: 0 0 8px; }
+
+  /* Experience cards */
+  .cards { display: grid; gap: 12px; margin-top: 4px; }
+  .card { background: var(--card); border: 1px solid var(--line); border-left: 4px solid var(--work); border-radius: 10px; }
+  .card h3 { font-family: var(--display); font-weight: 600; font-size: 1.2rem; line-height: 1.25; margin: 0 0 2px; }
+  .card .org, .card .dates { display: block; color: var(--muted); }
+  .card .plain { padding: 14px 16px; }
+  .card summary { position: relative; display: block; padding: 14px 46px 14px 16px; cursor: pointer; list-style: none; border-radius: 8px; }
+  .card summary::-webkit-details-marker { display: none; }
+  .card summary::after {
+    content: "";
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    width: 9px;
+    height: 9px;
+    margin-top: -7px;
+    border-right: 2px solid var(--muted);
+    border-bottom: 2px solid var(--muted);
+    transform: rotate(45deg);
+    transition: transform 0.2s ease;
+  }
+  .card[open] summary::after { transform: rotate(-135deg); margin-top: -2px; }
+  .card summary:hover h3 { color: var(--work); }
+  .card summary:focus-visible { outline: 3px solid var(--work); outline-offset: 2px; }
+  .card .did { margin: 0; padding: 14px 18px 8px 36px; list-style: disc; border-top: 1px solid var(--line); }
+  .card .did li { margin: 0 0 10px; }
 
   /* Skills */
   .skillgroup { margin-top: 20px; }
@@ -167,13 +198,14 @@
 
 <header class="hero">
   <div class="inner">
-    <p class="where">Madison, Mississippi</p>
+    <p class="where">Canton, Mississippi</p>
     <h1>Joe<br>Cotten</h1>
     <p class="role">Data analyst</p>
     <p class="lede">Vanderbilt-certified in data analytics, with hands-on experience in IT support and web development.</p>
     <div class="actions">
       <a class="btn solid" href="mailto:joe.cotten95@gmail.com">Email me</a>
       <a class="btn ghost" href="https://www.linkedin.com/in/joe-cotten" target="_blank" rel="noopener">View LinkedIn</a>
+      <a class="btn ghost" href="Joe-Cotten-Resume.pdf" download>Download resume (PDF)</a>
     </div>
   </div>
 </header>
@@ -197,19 +229,14 @@
         <span style="left:90%">2026</span>
       </div>
 
-      <div class="row school" data-start="2017" data-end="2019">
-        <div class="label"><strong>Computer Science, AA</strong><span>Southwest Mississippi Community College, 2017 to 2019</span></div>
-        <div class="track"><div class="bar" style="left:0%;width:20%"></div></div>
+      <div class="row school" data-start="2017.583" data-end="2019.5">
+        <div class="label"><strong>Computer Science, AA</strong><span>Southwest Mississippi Community College, Aug 2017 to May 2019</span></div>
+        <div class="track"><div class="bar" style="left:5.8%;width:19.2%"></div></div>
       </div>
 
-      <div class="row school" data-start="2019" data-end="2023">
-        <div class="label"><strong>Information Technology</strong><span>Mississippi State University, 2019 to Dec 2022</span></div>
-        <div class="track"><div class="bar" style="left:20%;width:40%"></div></div>
-      </div>
-
-      <div class="row work" data-start="2022.083" data-end="now">
-        <div class="label"><strong>Web Developer</strong><span>Juice &amp; Jen, Feb 2022 to present</span></div>
-        <div class="track"><div class="bar" style="left:50.8%;width:47.4%"></div></div>
+      <div class="row school" data-start="2019.583" data-end="2023">
+        <div class="label"><strong>Information Technology coursework</strong><span>Mississippi State University, Aug 2019 to Dec 2022</span></div>
+        <div class="track"><div class="bar" style="left:25.8%;width:34.2%"></div></div>
       </div>
 
       <div class="row work" data-start="2023.167" data-end="now">
@@ -222,9 +249,24 @@
         <div class="track"><div class="bar" style="left:68.3%;width:6.7%"></div></div>
       </div>
 
+      <div class="row work" data-start="2024.083" data-end="2024.833">
+        <div class="label"><strong>Consumer Protection Specialist I</strong><span>Mississippi Department of Agriculture, Feb 2024 to Oct 2024</span></div>
+        <div class="track"><div class="bar" style="left:70.8%;width:7.5%"></div></div>
+      </div>
+
+      <div class="row work" data-start="2024.75" data-end="2025.667">
+        <div class="label"><strong>Systems Analyst</strong><span>Mississippi United to End Homelessness, Oct 2024 to Aug 2025</span></div>
+        <div class="track"><div class="bar" style="left:77.5%;width:9.2%"></div></div>
+      </div>
+
       <div class="row work" data-start="2026.5" data-end="now">
         <div class="label"><strong>Systems Maintenance Technician</strong><span>Yates Services, Jul 2026 to present</span></div>
-        <div class="track"><div class="bar" style="left:95%;width:3.2%"></div></div>
+        <div class="track"><div class="bar" style="left:95%;width:3.1%"></div></div>
+      </div>
+
+      <div class="row school" data-start="2026.583" data-end="now">
+        <div class="label"><strong>Bachelor's, Information Technology</strong><span>University of Southern Mississippi, Aug 2026 to present</span></div>
+        <div class="track"><div class="bar" style="left:95.8%;width:2.3%"></div></div>
       </div>
     </div>
   </section>
@@ -232,28 +274,73 @@
   <div class="two">
     <section aria-labelledby="exp-h">
       <h2 id="exp-h">Experience</h2>
-      <ul class="entries">
-        <li>
-          <h3>Systems Maintenance Technician</h3>
-          <p>Yates Services, Canton, Mississippi</p>
-          <p>Jul 2026 to present</p>
-        </li>
-        <li>
-          <h3>Director of Technology</h3>
-          <p>Emmanuel Baptist Church, Macon, Mississippi</p>
-          <p>Mar 2023 to present</p>
-        </li>
-        <li>
-          <h3>Web Developer</h3>
-          <p>Juice &amp; Jen, Houston, Texas</p>
-          <p>Feb 2022 to present</p>
-        </li>
-      </ul>
+      <p class="intro">Tap a role to see what I did there.</p>
+      <div class="cards">
+        <details class="card">
+          <summary>
+            <h3>Systems Maintenance Technician</h3>
+            <span class="org">Yates Services, Canton, Mississippi</span>
+            <span class="dates">Jul 2026 to present</span>
+          </summary>
+          <ul class="did">
+            <li>Maintain the PCs on the assembly line at the Nissan manufacturing plant in Canton, Mississippi, so vehicles advance through the correct sequence numbers and workers can do their jobs without interruption.</li>
+            <li>Support torque tools connected to light bars that confirm fasteners are driven to the correct torque spec.</li>
+            <li>Maintain Dell Latitude tablets and scanners on forklifts and AGVs that confirm parts arrive at the correct location along their routes.</li>
+            <li>Keep Zebra, VIN, and certification printers running, including reloading paper and supplies.</li>
+          </ul>
+        </details>
+
+        <details class="card">
+          <summary>
+            <h3>Director of Technology</h3>
+            <span class="org">Emmanuel Baptist Church, Macon, Mississippi</span>
+            <span class="dates">Mar 2023 to present</span>
+          </summary>
+          <ul class="did">
+            <li>Manage all networking equipment and run cabling throughout the church.</li>
+            <li>Deployed ChurchCRM on AWS to track the church's finances and attendance.</li>
+            <li>Produce a live stream every Sunday using a network-attached 4K camera feeding OBS and streaming to YouTube, reaching viewers across a six-state area.</li>
+          </ul>
+        </details>
+
+        <details class="card">
+          <summary>
+            <h3>Systems Analyst</h3>
+            <span class="org">Mississippi United to End Homelessness, Jackson, Mississippi</span>
+            <span class="dates">Oct 2024 to Aug 2025</span>
+          </summary>
+          <ul class="did">
+            <li>Produced monthly, quarterly, and annual reports on Mississippi's unhoused population using Excel and HMIS (Homeless Management Information System), delivered to state agencies and the U.S. Department of Housing and Urban Development (HUD).</li>
+            <li>Cleaned and validated thousands of records so data met HUD standards.</li>
+            <li>Built report templates that streamlined recurring reporting.</li>
+          </ul>
+        </details>
+
+        <details class="card">
+          <summary>
+            <h3>Consumer Protection Specialist I</h3>
+            <span class="org">Mississippi Department of Agriculture, Jackson, Mississippi</span>
+            <span class="dates">Feb 2024 to Oct 2024</span>
+          </summary>
+          <ul class="did">
+            <li>Inspected nearly 2,000 fuel pumps across a four-county area, verifying that each one dispensed accurately and fairly.</li>
+            <li>Recorded inspections in WinWam and issued violation reports to the state and to station owners.</li>
+            <li>Enforced compliance by red-tagging pumps, taking them out of service, when violations went unresolved after one week.</li>
+            <li>Tested underground fuel tanks for water contamination and collected fuel samples from randomly selected stations every week.</li>
+            <li>Investigated consumer complaints.</li>
+          </ul>
+        </details>
+      </div>
     </section>
 
     <section aria-labelledby="edu-h">
       <h2 id="edu-h">Education</h2>
       <ul class="entries school">
+        <li>
+          <h3>University of Southern Mississippi</h3>
+          <p>Bachelor's degree, Information Technology</p>
+          <p>Aug 2026 to present</p>
+        </li>
         <li>
           <h3>Vanderbilt University</h3>
           <p>Certificate, Data Analytics</p>
@@ -261,13 +348,13 @@
         </li>
         <li>
           <h3>Mississippi State University</h3>
-          <p>Information Technology</p>
-          <p>2019 to Dec 2022</p>
+          <p>Information Technology coursework</p>
+          <p>Aug 2019 to Dec 2022</p>
         </li>
         <li>
           <h3>Southwest Mississippi Community College</h3>
           <p>Associate of Arts, Computer Science</p>
-          <p>2017 to 2019</p>
+          <p>Aug 2017 to May 2019</p>
         </li>
       </ul>
     </section>
@@ -280,6 +367,8 @@
       <ul>
         <li>SQL</li>
         <li>Python</li>
+        <li>Excel</li>
+        <li>HMIS</li>
         <li>Data Analytics</li>
         <li>Dashboards</li>
         <li>Data Management</li>
@@ -293,6 +382,11 @@
       <ul>
         <li>IT Infrastructure</li>
         <li>Technical Support</li>
+        <li>Networking</li>
+        <li>AWS</li>
+        <li>Live Streaming</li>
+        <li>OBS</li>
+        <li>Web Development</li>
       </ul>
     </div>
   </section>
