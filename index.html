@@ -3,149 +3,338 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
 <title>Joe Cotten | Data Analyst</title>
-<meta name="description" content="Joe Cotten is a data analyst in Madison, Mississippi with a background in IT, web development, and technical support.">
+<meta name="description" content="Joe Cotten is a data analyst in Madison, Mississippi with a background in IT support and web development.">
+<meta property="og:title" content="Joe Cotten | Data Analyst">
+<meta property="og:description" content="Data analyst in Madison, Mississippi with a background in IT support and web development.">
+<meta name="theme-color" content="#1F46E0">
+<script>document.documentElement.className += ' js';</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
   :root {
-    --bg: #fafaf8;
-    --card: #ffffff;
-    --text: #1d2327;
-    --muted: #5d6770;
-    --accent: #1f5fbf;
-    --line: #e4e4df;
-    --chip: #eaf1fb;
+    --paper: #F5F7FB;
+    --ink: #0D1B2E;
+    --muted: #51607A;
+    --work: #1F46E0;
+    --school: #E8A100;
+    --line: #D9DFEA;
+    --grid: rgba(13, 27, 46, 0.13);
+    --hero: #1F46E0;
+    --display: "Bricolage Grotesque", "Segoe UI", system-ui, sans-serif;
+    --body: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
   }
   @media (prefers-color-scheme: dark) {
     :root {
-      --bg: #14171a;
-      --card: #1b1f23;
-      --text: #e8eaec;
-      --muted: #9aa4ad;
-      --accent: #6aa5ff;
-      --line: #2b3137;
-      --chip: #22303f;
+      --paper: #0A1422;
+      --ink: #E8EEF8;
+      --muted: #9AA9C2;
+      --work: #7C9BFF;
+      --school: #FFC24B;
+      --line: #22314A;
+      --grid: rgba(232, 238, 248, 0.14);
+      --hero: #1634B5;
     }
   }
+
   * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
   body {
     margin: 0;
-    background: var(--bg);
-    color: var(--text);
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    line-height: 1.55;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--body);
+    font-size: 1.0625rem;
+    line-height: 1.6;
   }
-  .wrap { max-width: 760px; margin: 0 auto; padding: 40px 16px 64px; }
-  header { margin-bottom: 32px; }
-  h1 { font-size: 2.2rem; margin: 0 0 4px; letter-spacing: -0.02em; }
-  .title { font-size: 1.15rem; color: var(--accent); font-weight: 600; margin: 0 0 6px; }
-  .meta { color: var(--muted); margin: 0 0 16px; }
-  .links { display: flex; flex-wrap: wrap; gap: 10px; }
-  .links a {
+  .inner { max-width: 880px; margin: 0 auto; padding: 0 20px; }
+
+  /* Hero */
+  .hero {
+    background-color: var(--hero);
+    background-image:
+      linear-gradient(rgba(255,255,255,0.09) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,0.09) 1px, transparent 1px);
+    background-size: 48px 48px;
+    color: #fff;
+    padding: clamp(48px, 10vw, 104px) 0 clamp(44px, 8vw, 88px);
+  }
+  .where { margin: 0 0 12px; font-weight: 500; opacity: 0.9; }
+  h1 {
+    font-family: var(--display);
+    font-weight: 800;
+    font-size: clamp(3.6rem, 15vw, 8.5rem);
+    line-height: 0.9;
+    letter-spacing: -0.035em;
+    margin: 0 0 22px;
+  }
+  .role {
+    font-family: var(--display);
+    font-weight: 600;
+    font-size: clamp(1.4rem, 4vw, 2rem);
+    margin: 0 0 14px;
+  }
+  .lede { max-width: 34em; font-size: 1.15rem; margin: 0 0 28px; opacity: 0.95; }
+  .actions { display: flex; flex-wrap: wrap; gap: 12px; }
+  .btn {
+    display: inline-block;
     text-decoration: none;
-    color: var(--accent);
-    border: 1px solid var(--line);
-    background: var(--card);
-    padding: 8px 14px;
-    border-radius: 999px;
-    font-size: 0.95rem;
+    font-weight: 600;
+    padding: 12px 22px;
+    border-radius: 8px;
+    border: 2px solid #fff;
   }
-  .links a:hover { border-color: var(--accent); }
-  section { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 22px 22px 6px; margin-bottom: 18px; }
-  h2 { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--muted); margin: 0 0 14px; }
-  .item { margin-bottom: 18px; }
-  .item h3 { font-size: 1.05rem; margin: 0; }
-  .item .sub { color: var(--muted); font-size: 0.95rem; margin: 2px 0 0; }
-  .chips { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; padding: 0; list-style: none; }
-  .chips li { background: var(--chip); color: var(--text); padding: 6px 12px; border-radius: 999px; font-size: 0.9rem; }
-  p.summary { margin: 0 0 16px; }
-  footer { text-align: center; color: var(--muted); font-size: 0.85rem; margin-top: 28px; }
-  @media (max-width: 480px) { h1 { font-size: 1.8rem; } }
+  .btn.solid { background: #fff; color: #1634B5; }
+  .btn.ghost { color: #fff; }
+  .btn:hover { transform: translateY(-1px); }
+  .btn:focus-visible { outline: 3px solid #fff; outline-offset: 3px; }
+
+  /* Sections */
+  main { padding: 56px 0 24px; }
+  h2 {
+    font-family: var(--display);
+    font-weight: 800;
+    font-size: clamp(1.7rem, 5vw, 2.3rem);
+    letter-spacing: -0.02em;
+    line-height: 1.1;
+    margin: 0 0 8px;
+  }
+  .intro { color: var(--muted); margin: 0 0 24px; }
+  section { margin-bottom: 64px; }
+
+  /* Timeline chart */
+  .legend { display: flex; gap: 20px; margin: 0 0 22px; font-size: 0.95rem; color: var(--muted); }
+  .legend span { display: inline-flex; align-items: center; gap: 8px; }
+  .legend i { width: 14px; height: 14px; border-radius: 3px; display: inline-block; }
+  .legend .w i { background: var(--work); }
+  .legend .s i { background: var(--school); }
+
+  .axis { position: relative; height: 1.5em; margin-bottom: 6px; font-size: 0.85rem; color: var(--muted); }
+  .axis span { position: absolute; top: 0; padding-left: 5px; border-left: 1px solid var(--grid); height: 100%; }
+
+  .row { margin: 0 0 20px; }
+  .label { display: flex; flex-wrap: wrap; gap: 0 10px; align-items: baseline; margin-bottom: 5px; }
+  .label strong { font-weight: 600; }
+  .label span { color: var(--muted); font-size: 0.92rem; }
+  .track {
+    position: relative;
+    height: 18px;
+    border-bottom: 1px solid var(--line);
+    background-image: linear-gradient(to right, var(--grid) 1px, transparent 1px);
+    background-size: 30% 100%;
+  }
+  .bar {
+    position: absolute;
+    top: 3px;
+    bottom: 3px;
+    min-width: 6px;
+    border-radius: 3px;
+    transform-origin: left center;
+  }
+  .row.work .bar { background: var(--work); }
+  .row.school .bar { background: var(--school); }
+
+  .js .bar { transform: scaleX(0); transition: transform 0.9s cubic-bezier(0.2, 0.7, 0.2, 1); }
+  .js .chart.in .bar { transform: none; }
+
+  /* Detail lists */
+  .two { display: grid; grid-template-columns: 1fr; gap: 56px; }
+  @media (min-width: 800px) { .two { grid-template-columns: 1fr 1fr; gap: 48px; } }
+  .entries { list-style: none; margin: 18px 0 0; padding: 0; }
+  .entries li { padding-left: 16px; margin-bottom: 26px; border-left: 4px solid var(--work); }
+  .entries.school li { border-left-color: var(--school); }
+  .entries h3 { font-family: var(--display); font-weight: 600; font-size: 1.25rem; line-height: 1.25; margin: 0 0 2px; }
+  .entries p { margin: 0; color: var(--muted); }
+
+  /* Skills */
+  .skillgroup { margin-top: 20px; }
+  .skillgroup h3 { font-size: 1rem; font-weight: 600; margin: 0 0 8px; }
+  .skillgroup ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 8px; }
+  .skillgroup li { border: 1.5px solid var(--ink); border-radius: 6px; padding: 4px 12px; font-weight: 500; }
+
+  footer { border-top: 1px solid var(--line); padding: 24px 0 48px; color: var(--muted); font-size: 0.9rem; }
+  a:focus-visible { outline: 3px solid var(--work); outline-offset: 3px; }
+
+  @media (prefers-reduced-motion: reduce) {
+    .js .bar { transform: none; transition: none; }
+    .btn:hover { transform: none; }
+  }
 </style>
 </head>
 <body>
-<div class="wrap">
 
-  <header>
-    <h1>Joe Cotten</h1>
-    <p class="title">Data Analyst</p>
-    <p class="meta">Madison, Mississippi</p>
-    <div class="links">
-      <a href="mailto:joe.cotten95@gmail.com">Email</a>
-      <a href="https://www.linkedin.com/in/joe-cotten" target="_blank" rel="noopener">LinkedIn</a>
+<header class="hero">
+  <div class="inner">
+    <p class="where">Madison, Mississippi</p>
+    <h1>Joe<br>Cotten</h1>
+    <p class="role">Data analyst</p>
+    <p class="lede">Vanderbilt-certified in data analytics, with hands-on experience in IT support and web development.</p>
+    <div class="actions">
+      <a class="btn solid" href="mailto:joe.cotten95@gmail.com">Email me</a>
+      <a class="btn ghost" href="https://www.linkedin.com/in/joe-cotten" target="_blank" rel="noopener">View LinkedIn</a>
     </div>
-  </header>
+  </div>
+</header>
 
-  <section>
-    <h2>About</h2>
-    <p class="summary">
-      Data analyst with a background in information technology, web development, and technical support.
-      I pair hands-on IT experience with training in data analytics, working with SQL, Python, and dashboards
-      to turn data into something people can use.
-    </p>
+<main class="inner">
+
+  <section aria-labelledby="timeline-h">
+    <h2 id="timeline-h">Where I've worked and studied</h2>
+    <p class="intro">Every bar is a role or a program, drawn to scale from 2017 to today.</p>
+
+    <div class="legend" aria-hidden="true">
+      <span class="w"><i></i>Work</span>
+      <span class="s"><i></i>School</span>
+    </div>
+
+    <div class="chart" id="chart">
+      <div class="axis" aria-hidden="true">
+        <span style="left:0%">2017</span>
+        <span style="left:30%">2020</span>
+        <span style="left:60%">2023</span>
+        <span style="left:90%">2026</span>
+      </div>
+
+      <div class="row school" data-start="2017" data-end="2019">
+        <div class="label"><strong>Computer Science, AA</strong><span>Southwest Mississippi Community College, 2017 to 2019</span></div>
+        <div class="track"><div class="bar" style="left:0%;width:20%"></div></div>
+      </div>
+
+      <div class="row school" data-start="2019" data-end="2023">
+        <div class="label"><strong>Information Technology</strong><span>Mississippi State University, 2019 to Dec 2022</span></div>
+        <div class="track"><div class="bar" style="left:20%;width:40%"></div></div>
+      </div>
+
+      <div class="row work" data-start="2022.083" data-end="now">
+        <div class="label"><strong>Web Developer</strong><span>Juice &amp; Jen, Feb 2022 to present</span></div>
+        <div class="track"><div class="bar" style="left:50.8%;width:47.4%"></div></div>
+      </div>
+
+      <div class="row work" data-start="2023.167" data-end="now">
+        <div class="label"><strong>Director of Technology</strong><span>Emmanuel Baptist Church, Mar 2023 to present</span></div>
+        <div class="track"><div class="bar" style="left:61.7%;width:36.5%"></div></div>
+      </div>
+
+      <div class="row school" data-start="2023.833" data-end="2024.5">
+        <div class="label"><strong>Data Analytics certificate</strong><span>Vanderbilt University, Nov 2023 to May 2024</span></div>
+        <div class="track"><div class="bar" style="left:68.3%;width:6.7%"></div></div>
+      </div>
+
+      <div class="row work" data-start="2026.5" data-end="now">
+        <div class="label"><strong>Systems Maintenance Technician</strong><span>Yates Services, Jul 2026 to present</span></div>
+        <div class="track"><div class="bar" style="left:95%;width:3.2%"></div></div>
+      </div>
+    </div>
   </section>
 
-  <section>
-    <h2>Experience</h2>
+  <div class="two">
+    <section aria-labelledby="exp-h">
+      <h2 id="exp-h">Experience</h2>
+      <ul class="entries">
+        <li>
+          <h3>Systems Maintenance Technician</h3>
+          <p>Yates Services, Canton, Mississippi</p>
+          <p>Jul 2026 to present</p>
+        </li>
+        <li>
+          <h3>Director of Technology</h3>
+          <p>Emmanuel Baptist Church, Macon, Mississippi</p>
+          <p>Mar 2023 to present</p>
+        </li>
+        <li>
+          <h3>Web Developer</h3>
+          <p>Juice &amp; Jen, Houston, Texas</p>
+          <p>Feb 2022 to present</p>
+        </li>
+      </ul>
+    </section>
 
-    <div class="item">
-      <h3>System Technician</h3>
-      <p class="sub">Yates Services &middot; Canton, Mississippi</p>
-      <p class="sub">Jul 2026 &ndash; Present</p>
+    <section aria-labelledby="edu-h">
+      <h2 id="edu-h">Education</h2>
+      <ul class="entries school">
+        <li>
+          <h3>Vanderbilt University</h3>
+          <p>Certificate, Data Analytics</p>
+          <p>Nov 2023 to May 2024</p>
+        </li>
+        <li>
+          <h3>Mississippi State University</h3>
+          <p>Information Technology</p>
+          <p>2019 to Dec 2022</p>
+        </li>
+        <li>
+          <h3>Southwest Mississippi Community College</h3>
+          <p>Associate of Arts, Computer Science</p>
+          <p>2017 to 2019</p>
+        </li>
+      </ul>
+    </section>
+  </div>
+
+  <section aria-labelledby="skills-h">
+    <h2 id="skills-h">Skills</h2>
+    <div class="skillgroup">
+      <h3>Data</h3>
+      <ul>
+        <li>SQL</li>
+        <li>Python</li>
+        <li>Data Analytics</li>
+        <li>Dashboards</li>
+        <li>Data Management</li>
+        <li>Data Engineering</li>
+        <li>Data Science</li>
+        <li>Algorithms</li>
+      </ul>
     </div>
-
-    <div class="item">
-      <h3>Director of Technology</h3>
-      <p class="sub">Emmanuel Baptist Church &middot; Macon, Mississippi</p>
-      <p class="sub">Mar 2023 &ndash; Present</p>
-    </div>
-
-    <div class="item">
-      <h3>Web Developer</h3>
-      <p class="sub">Juice &amp; Jen &middot; Houston, Texas</p>
-      <p class="sub">Feb 2022 &ndash; Present</p>
+    <div class="skillgroup">
+      <h3>IT</h3>
+      <ul>
+        <li>IT Infrastructure</li>
+        <li>Technical Support</li>
+      </ul>
     </div>
   </section>
 
-  <section>
-    <h2>Education</h2>
+</main>
 
-    <div class="item">
-      <h3>Vanderbilt University</h3>
-      <p class="sub">Certificate, Data Analytics</p>
-      <p class="sub">Nov 2023 &ndash; May 2024</p>
-    </div>
+<footer>
+  <div class="inner">&copy; <span id="yr">2026</span> Joe Cotten</div>
+</footer>
 
-    <div class="item">
-      <h3>Mississippi State University</h3>
-      <p class="sub">Information Technology</p>
-      <p class="sub">2019 &ndash; Dec 2022</p>
-    </div>
+<script>
+(function () {
+  var START = 2017, END = 2027;
+  var d = new Date();
+  var nowF = d.getFullYear() + (d.getMonth() + (d.getDate() - 1) / 31) / 12;
+  if (nowF > END) nowF = END;
 
-    <div class="item">
-      <h3>Southwest Mississippi Community College</h3>
-      <p class="sub">Associate of Arts, Computer Science</p>
-      <p class="sub">2017 &ndash; 2019</p>
-    </div>
-  </section>
+  var chart = document.getElementById('chart');
+  var rows = chart.querySelectorAll('.row');
+  for (var i = 0; i < rows.length; i++) {
+    var row = rows[i];
+    var bar = row.querySelector('.bar');
+    var s = parseFloat(row.getAttribute('data-start'));
+    var endAttr = row.getAttribute('data-end');
+    var e = endAttr === 'now' ? nowF : parseFloat(endAttr);
+    bar.style.left = ((s - START) / (END - START) * 100) + '%';
+    bar.style.width = ((e - s) / (END - START) * 100) + '%';
+    bar.style.transitionDelay = (i * 90) + 'ms';
+  }
 
-  <section>
-    <h2>Skills</h2>
-    <ul class="chips">
-      <li>SQL</li>
-      <li>Python</li>
-      <li>Data Analytics</li>
-      <li>Dashboards</li>
-      <li>Data Management</li>
-      <li>Data Engineering</li>
-      <li>Data Science</li>
-      <li>Algorithms</li>
-      <li>IT Infrastructure</li>
-      <li>Technical Support</li>
-    </ul>
-  </section>
+  function play() { chart.className += ' in'; }
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function (entries) {
+      if (entries[0].isIntersecting) { play(); io.disconnect(); }
+    }, { threshold: 0.2 });
+    io.observe(chart);
+  } else {
+    play();
+  }
 
-  <footer>&copy; <span id="yr"></span> Joe Cotten</footer>
-</div>
-<script>document.getElementById('yr').textContent = new Date().getFullYear();</script>
+  document.getElementById('yr').textContent = d.getFullYear();
+})();
+</script>
 </body>
 </html>
