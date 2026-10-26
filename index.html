@@ -4,10 +4,10 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="color-scheme" content="light dark">
-<title>Joe Cotten | Data Analyst</title>
-<meta name="description" content="Joe Cotten is a data analyst in Canton, Mississippi with a background in IT support and web development.">
-<meta property="og:title" content="Joe Cotten | Data Analyst">
-<meta property="og:description" content="Data analyst in Canton, Mississippi with a background in IT support and web development.">
+<title>Joe Cotten | IT Specialist and Data Analyst</title>
+<meta name="description" content="Joe Cotten is an IT specialist and data analyst in Canton, Mississippi with a background in IT support and web development.">
+<meta property="og:title" content="Joe Cotten | IT Specialist and Data Analyst">
+<meta property="og:description" content="IT specialist and data analyst in Canton, Mississippi with a background in IT support and web development.">
 <meta name="theme-color" content="#1F46E0">
 <script>document.documentElement.className += ' js';</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -104,6 +104,7 @@
     margin: 0 0 8px;
   }
   .intro { color: var(--muted); margin: 0 0 24px; }
+  .about { max-width: 46em; margin: 0; }
   section { margin-bottom: 64px; }
 
   /* Timeline chart */
@@ -179,6 +180,16 @@
   .card .did { margin: 0; padding: 14px 18px 8px 36px; list-style: disc; border-top: 1px solid var(--line); }
   .card .did li { margin: 0 0 10px; }
 
+
+  /* School colors (primary color of each school; Southwest is navy in light mode, cardinal red in dark mode) */
+  .s-usm  { --c1: #FFCC00; }
+  .s-vu   { --c1: #CFAE70; }
+  .s-msu  { --c1: #5D1725; }
+  .s-smcc { --c1: #14235F; }
+  .row.school.s-usm .bar, .row.school.s-vu .bar, .row.school.s-msu .bar, .row.school.s-smcc .bar { background: var(--c1); }
+  .entries.school li.s-usm, .entries.school li.s-vu, .entries.school li.s-msu, .entries.school li.s-smcc { border-left-color: var(--c1); }
+  @media (prefers-color-scheme: dark) { .s-msu { --c1: #B04A60; } .s-smcc { --c1: #E04B63; } }
+
   /* Skills */
   .skillgroup { margin-top: 20px; }
   .skillgroup h3 { font-size: 1rem; font-weight: 600; margin: 0 0 8px; }
@@ -200,7 +211,7 @@
   <div class="inner">
     <p class="where">Canton, Mississippi</p>
     <h1>Joe<br>Cotten</h1>
-    <p class="role">Data analyst</p>
+    <p class="role">IT specialist and data analyst</p>
     <p class="lede">Vanderbilt-certified in data analytics, with hands-on experience in IT support and web development.</p>
     <div class="actions">
       <a class="btn solid" href="mailto:joe.cotten95@gmail.com">Email me</a>
@@ -211,6 +222,11 @@
 </header>
 
 <main class="inner">
+
+  <section aria-labelledby="summary-h">
+    <h2 id="summary-h">Summary</h2>
+    <p class="about">Dedicated System Analyst with experience in maintaining multi-agency databases and ensuring compliance with HUD standards. Managed IT resources across five regional offices, resulting in operational continuity and resolved technical issues to improve statewide partner agency effectiveness. Seeking IT Specialist role to leverage skills in data integrity and technical support to enhance IT operations using comprehensive technical expertise.</p>
+  </section>
 
   <section aria-labelledby="timeline-h">
     <h2 id="timeline-h">Where I've worked and studied</h2>
@@ -229,12 +245,18 @@
         <span style="left:90%">2026</span>
       </div>
 
-      <div class="row school" data-start="2017.583" data-end="2019.5">
+      <div class="row school s-smcc" data-start="2017.583" data-end="2019.5">
         <div class="label"><strong>Computer Science, AA</strong><span>Southwest Mississippi Community College, Aug 2017 to May 2019</span></div>
         <div class="track"><div class="bar" style="left:5.8%;width:19.2%"></div></div>
       </div>
 
-      <div class="row school" data-start="2019.583" data-end="2023">
+
+      <div class="row work" data-start="2017.583" data-end="now">
+        <div class="label"><strong>Athletics Official</strong><span>Mississippi High School Activities Association, Aug 2017 to present</span></div>
+        <div class="track"><div class="bar" style="left:5.8%;width:92.4%"></div></div>
+      </div>
+
+      <div class="row school s-msu" data-start="2019.583" data-end="2023">
         <div class="label"><strong>Information Technology coursework</strong><span>Mississippi State University, Aug 2019 to Dec 2022</span></div>
         <div class="track"><div class="bar" style="left:25.8%;width:34.2%"></div></div>
       </div>
@@ -244,13 +266,13 @@
         <div class="track"><div class="bar" style="left:61.7%;width:36.5%"></div></div>
       </div>
 
-      <div class="row school" data-start="2023.833" data-end="2024.5">
+      <div class="row school s-vu" data-start="2023.833" data-end="2024.5">
         <div class="label"><strong>Data Analytics certificate</strong><span>Vanderbilt University, Nov 2023 to May 2024</span></div>
         <div class="track"><div class="bar" style="left:68.3%;width:6.7%"></div></div>
       </div>
 
       <div class="row work" data-start="2024.083" data-end="2024.833">
-        <div class="label"><strong>Consumer Protection Specialist I</strong><span>Mississippi Department of Agriculture, Feb 2024 to Oct 2024</span></div>
+        <div class="label"><strong>Consumer Protection Specialist I</strong><span>Mississippi Department of Agriculture and Commerce, Feb 2024 to Oct 2024</span></div>
         <div class="track"><div class="bar" style="left:70.8%;width:7.5%"></div></div>
       </div>
 
@@ -264,7 +286,7 @@
         <div class="track"><div class="bar" style="left:95%;width:3.1%"></div></div>
       </div>
 
-      <div class="row school" data-start="2026.583" data-end="now">
+      <div class="row school s-usm" data-start="2026.583" data-end="now">
         <div class="label"><strong>Bachelor's, Information Technology</strong><span>University of Southern Mississippi, Aug 2026 to present</span></div>
         <div class="track"><div class="bar" style="left:95.8%;width:2.3%"></div></div>
       </div>
@@ -297,9 +319,10 @@
             <span class="dates">Mar 2023 to present</span>
           </summary>
           <ul class="did">
-            <li>Manage all networking equipment and run cabling throughout the church.</li>
-            <li>Deployed ChurchCRM on AWS to track the church's finances and attendance.</li>
-            <li>Produce a live stream every Sunday using a network-attached 4K camera feeding OBS and streaming to YouTube, reaching viewers across a six-state area.</li>
+            <li>Streamlined data management by deploying ChurchCRM on AWS with automated data collection for attendance and finance records, keeping them secure and accessible.</li>
+            <li>Maintain documentation on system processes and provide technical support to address user issues.</li>
+            <li>Configure and manage the infrastructure for a live stream every Sunday, using a network-attached 4K camera feeding OBS and streaming to YouTube, reaching viewers across a six-state area.</li>
+            <li>Directed church-wide network upgrades that improved connectivity for administrative systems and supported expanded digital outreach; manage all networking equipment and cabling.</li>
           </ul>
         </details>
 
@@ -310,48 +333,65 @@
             <span class="dates">Oct 2024 to Aug 2025</span>
           </summary>
           <ul class="did">
-            <li>Produced monthly, quarterly, and annual reports on Mississippi's unhoused population using Excel and HMIS (Homeless Management Information System), delivered to state agencies and the U.S. Department of Housing and Urban Development (HUD).</li>
-            <li>Cleaned and validated thousands of records so data met HUD standards.</li>
+            <li>Administered and maintained a multi-agency database, cleaning and validating thousands of records to maintain data integrity and meet HUD compliance standards.</li>
+            <li>Generated and analyzed HUD-mandated reports using Excel and HMIS (Homeless Management Information System), on monthly, quarterly, and annual schedules, to inform federal and internal policy decisions.</li>
             <li>Built report templates that streamlined recurring reporting.</li>
+            <li>Provided technical support and help desk services to partner agencies statewide, resolving data and hardware issues.</li>
+            <li>Managed hardware and IT resources across five regional offices, ensuring operational continuity.</li>
           </ul>
         </details>
 
         <details class="card">
           <summary>
             <h3>Consumer Protection Specialist I</h3>
-            <span class="org">Mississippi Department of Agriculture, Jackson, Mississippi</span>
+            <span class="org">Mississippi Department of Agriculture and Commerce, Jackson, Mississippi</span>
             <span class="dates">Feb 2024 to Oct 2024</span>
           </summary>
           <ul class="did">
-            <li>Inspected nearly 2,000 fuel pumps across a four-county area, verifying that each one dispensed accurately and fairly.</li>
-            <li>Recorded inspections in WinWam and issued violation reports to the state and to station owners.</li>
+            <li>Conducted on-site inspections and data collection at over 200 fuel stations, covering nearly 2,000 fuel pumps across a four-county area, to ensure accurate dispensing and regulatory compliance under state law.</li>
+            <li>Recorded inspections in WinWam and issued violation reports to the state and to station owners; identified trends and anomalies through data analysis, leading to timely enforcement actions.</li>
             <li>Enforced compliance by red-tagging pumps, taking them out of service, when violations went unresolved after one week.</li>
             <li>Tested underground fuel tanks for water contamination and collected fuel samples from randomly selected stations every week.</li>
-            <li>Investigated consumer complaints.</li>
+            <li>Communicated inspection results and required corrective actions to business owners and maintenance workers, and investigated consumer complaints.</li>
+            <li>Maintained a self-directed inspection schedule, consistently meeting tight state deadlines.</li>
           </ul>
         </details>
+
+        <details class="card">
+          <summary>
+            <h3>Athletics Official</h3>
+            <span class="org">Mississippi High School Activities Association</span>
+            <span class="dates">Aug 2017 to present</span>
+          </summary>
+          <ul class="did">
+            <li>Travel to schools across the majority of Mississippi to officiate interscholastic athletic competitions.</li>
+            <li>Enforce regulations to facilitate fair gameplay while maintaining a safe, respectful environment for student-athletes and coaches.</li>
+            <li>Assess complex in-game scenarios to accurately interpret and apply rules, ensuring consistent enforcement.</li>
+          </ul>
+        </details>
+
       </div>
     </section>
 
     <section aria-labelledby="edu-h">
       <h2 id="edu-h">Education</h2>
       <ul class="entries school">
-        <li>
+        <li class="s-usm">
           <h3>University of Southern Mississippi</h3>
-          <p>Bachelor's degree, Information Technology</p>
+          <p>Bachelor's degree, Information Technology (in progress)</p>
           <p>Aug 2026 to present</p>
         </li>
-        <li>
+        <li class="s-vu">
           <h3>Vanderbilt University</h3>
           <p>Certificate, Data Analytics</p>
           <p>Nov 2023 to May 2024</p>
         </li>
-        <li>
+        <li class="s-msu">
           <h3>Mississippi State University</h3>
           <p>Information Technology coursework</p>
           <p>Aug 2019 to Dec 2022</p>
         </li>
-        <li>
+        <li class="s-smcc">
           <h3>Southwest Mississippi Community College</h3>
           <p>Associate of Arts, Computer Science</p>
           <p>Aug 2017 to May 2019</p>
@@ -375,6 +415,8 @@
         <li>Data Engineering</li>
         <li>Data Science</li>
         <li>Algorithms</li>
+        <li>Data Collection</li>
+        <li>Data Entry</li>
       </ul>
     </div>
     <div class="skillgroup">
@@ -387,6 +429,16 @@
         <li>Live Streaming</li>
         <li>OBS</li>
         <li>Web Development</li>
+        <li>Computer Hardware</li>
+        <li>Computer Repair</li>
+        <li>Microsoft Office</li>
+      </ul>
+    </div>
+    <div class="skillgroup">
+      <h3>Other</h3>
+      <ul>
+        <li>Public Speaking</li>
+        <li>Petroleum Products</li>
       </ul>
     </div>
   </section>
